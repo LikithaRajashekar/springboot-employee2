@@ -34,8 +34,8 @@ public class EmployeeController {
 	
 	
 	@PutMapping("/update/{salary}")
-	public Employee updateEmployee(@RequestBody Employee employee, @PathVariable Double salary) {
-		return employeeservice.updateEmployee(employee, salary);
+	public Employee updateEmployee(@RequestBody Employee employee, @PathVariable int id, @PathVariable Double salary) {
+		return employeeservice.updateEmployee(employee, id, salary);
 
 	}
 }
