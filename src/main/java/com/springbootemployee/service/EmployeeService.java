@@ -39,18 +39,13 @@ public class EmployeeService {
 	}
 	
 	public Employee updateEmployee(Employee d, Double salary) {
-	      List<Employee> l = (List<Employee>) repo.findAll();
-	      Integer id = 0;
-	      for (Employee s : l) {
-	    	  if (s.getSalary() == salary) {
-	    		  id = s.getId();
-	    	  }
-	      }
-	      Optional<Employee> employeeDb = this.repo.findById(id);
-	      Employee employeeUpdate = employeeDb.get();
-	      employeeUpdate.setSalary(d.getSalary());
-	      repo.save(d);
-	      return employeeUpdate;
+	     
+		 Optional<Employee> e = repo.findById(id);
+	      Employee e1 = e.get();
+	      e1.setSalary(d.getSalary());
+	      repo.save(e1);
+	      
+	      return e1;
 	}
 
 	
