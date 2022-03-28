@@ -1,0 +1,13 @@
+version: "3"
+services:
+    spring-boot-app: 
+        image: springbootrestapi-docker
+        restart: always
+        build:  .
+        ports: 
+         - 9595:9090
+        environment:
+         MYSQL_HOST: localhost
+         MYSQL_USER: root
+         MYSQL_PASSWORD: Likitharaj$0
+         MYSQL_PORT: 3306
