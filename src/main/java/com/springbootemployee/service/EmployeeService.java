@@ -38,7 +38,7 @@ public class EmployeeService {
 		
 	}
 	
-	public Employee updateEmployee(Employee d, Double salary) {
+	public Employee updateEmployee(Employee d, int id, Double salary) {
 	     
 		 Optional<Employee> e = repo.findById(id);
 	      Employee e1 = e.get();
